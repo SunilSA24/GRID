@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    /* <!-- TASK 3: Magazine Layout
+    Create a magazine-style grid layout with overlapping elements
+    Requirements:
+    - Overlapping images and text
+    - Varied column sizes
+    - Text wrap around images
+    --> */
+    .magazine {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 100px);
+      gap: 1rem;
+      padding: 2rem;
+      background: #f8f9fa;
+    }
+
+    .magazine .title {
+      grid-column: 1/5;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .magazine .feature-img {
+      grid-column: 1 / 4;
+      grid-row: 2 / 5;
+      background: #bdc3c7;
+    }
+
+    .magazine .article-text {
+      grid-column: 3 / 7;
+      grid-row: 3 / 4;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .magazine .sidebar-img {
+      grid-column: 5/7;
+      grid-row: 1/3;
+      background: #95a5a6;
+    }
+
+    .magazine .caption {
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+      background: #34495e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="task-3">
+    <h2>Task 3: Magazine Layout</h2>
+    <div class="magazine">
+      <h1 class="title">Magazine Layout</h1>
+      <div class="feature-img"></div>
+      <div class="article-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="sidebar-img"></div>
+      <div class="caption">Featured Story</div>
+    </div>
+  </div>
+</body>
+
+</html>

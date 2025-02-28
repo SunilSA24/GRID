@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* <!-- TASK 4: Grid Areas Template
+              Create a basic webpage layout using grid-template-areas
+              Requirements:
+              - Header spanning full width
+              - Sidebar on the left
+              - Main content area
+              - Footer spanning full width
+      --> */
+      /* .layout {
+        height: 100vh;
+        display: grid; 
+        gap: 10px;
+        grid-template-areas: 
+        "top top"
+        "side content"
+        "footer footer";
+        grid-template-rows: 80px 1fr 80px;
+        grid-template-columns: 1fr 4fr;
+      }
+
+      .layout > * {
+        padding: 20px;
+        background-color: #f0f0f0;
+        
+      }
+
+      .layout header {
+        grid-area: top;
+        background-color: #333;
+        color: white;
+      }
+      .layout aside {
+        grid-area: side;
+        background-color: #f4f4f4;
+      }
+      .layout main {
+        grid-area: content;
+      }
+      .layout footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+      } */
+      .box {
+       display: grid;
+       grid-template-columns: auto auto;
+      }
+      .item {
+        justify-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"> 
+      <p class="item"> Paragraph 1</p>
+      <p class="item"> Paragraph 2</p>
+    </div>
+
+    <form action="/submit">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <details><summary>More Information</summary><p>This is the detailed content that can be shown or hidden.</p></details>
+    <!-- <div class="task-2">
+      <h2>Task 4: Grid Areas Template</h2>
+      <div class="layout">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+        <footer>Footer</footer>
+      </div>
+    </div> -->
+  </body>
+</html>

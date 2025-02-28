@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+
+<script>
+    for(let i = 0; i < 9; i++) {
+        let card = document.createElement("div");
+        card.classList.add("card");
+        card.setAttribute("data-color", i);
+        document.body.appendChild(card);
+    }
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.addEventListener("click", function() {
+            let color = card.getAttribute("data-color");
+            let randomColor = Math.floor(Math.random() * 9);
+            card.style.backgroundColor = `rgb(${randomColor * 30}, ${randomColor * 30}, ${randomColor * 30})`;
+        
+        });
+    });
+    
+</script>
+</html>

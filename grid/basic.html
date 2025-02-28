@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p class="bold" id="p">This is a Paragraph</p>
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    
+
+    
+</body>
+<script>
+    let ulList = document.querySelector("ul");
+    let itemList = document.querySelectorAll("li");
+
+    let count = 0;
+    for (let i = 0; i < itemList.length; i++) {
+        count++;
+        if (parseInt(itemList[i].textContent) !== count) {
+            let newItem = document.createElement("li");
+            newItem.textContent = count;
+            ulList.insertBefore(newItem, itemList[i]);
+            count++;
+        }
+    }
+
+    // let addItem = itemList[6];
+    // let newItem = document.createElement("li");
+    // newItem.textContent = "7";
+    // ulList.insertBefore(newItem, addItem);
+
+</script>
+</html>
